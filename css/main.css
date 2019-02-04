@@ -11,6 +11,13 @@ body {
     position: relative;
 }
 
+.header .title {
+    position: absolute;
+    z-index: 2;
+    top: 0%;
+    left: 5%;
+}
+
 .header img {
     width: 100%;
     z-index: -1;
@@ -50,6 +57,7 @@ body {
 .card {
     background-color:#ebeff8;
     margin: 0.5%;
+    border-radius: 12.5px;
 }
 
 .recommended-content .card {
