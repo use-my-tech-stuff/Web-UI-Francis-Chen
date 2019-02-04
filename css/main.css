@@ -3,11 +3,11 @@ body {
 }
 
 h1 {
-    font-size: 
+    font-size: 48px;
 }
 
 h2 {
-    font-size:
+    font-size: 36px;
 }
 
 h3 {
@@ -16,11 +16,15 @@ h3 {
 
 .container-main {
     margin: 0 auto;
-    width: 800px; 
+    width: 85%; 
 }
 
 .header {
     position: relative;
+}
+
+.header-text {
+    text-align: center;
 }
 
 .header .title {
@@ -34,17 +38,27 @@ h3 {
     width: 100%;
     z-index: -1;
     opacity: 75%;
+    filter: grayscale(100%);
 }
 
 .header .search {
     z-index: 2;
     position: absolute;
-    top: 50%;
-    left: 30%;
+    top: 80%;
+    left: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 1%;
+}
+
+.header .search .searchbutton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .header .search input[type=text] {
@@ -52,12 +66,26 @@ h3 {
     padding: 6px;
     margin-top: 8px;
     margin-right: 16px;
-    font-size: 17px;
+    font-size: 25px;
     border-radius: 2px;
   }
+
+.header .search button[type=submit] {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    background-color: #0260ee;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
   
-.header .search h3 {
+.header .search h2 {
       margin: 0px;
+      text-align: center;
+      font-size: 30px;
 }
 
 .header .img {
@@ -81,20 +109,22 @@ h3 {
 
 .header nav ul li {
     float: left; 
-    padding: 7px;
+    padding: 30px;
 }
 
 .header nav ul li a {
     text-decoration: none;
     color: #0c1425;
+    font-size: 24px;
 }
 
-.recommended-content {
+.aboutus {
     display: flex; 
     flex-wrap: wrap; 
     text-align: center;
     align-content: center;
     justify-content: center;
+    background-color: #ebeff8;
 }
 
 .card {
@@ -103,19 +133,21 @@ h3 {
     border-radius: 5px;
 }
 
-.recommended-content .card {
+.aboutus .item {
     width: 30%;
+    height: 30%;
 }
 
 .main-content {
     display: flex; 
     flex-wrap: wrap; 
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .main-content .card {
-    width: 30%; 
+    width: 25%; 
+    padding: 0.5%;
 }
 
 .main-content .card img {
