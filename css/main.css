@@ -3,15 +3,15 @@ body {
 }
 
 h1 {
-    font-size: 48px;
-}
-
-h2 {
     font-size: 36px;
 }
 
+h2 {
+    font-size: 30px;
+}
+
 h3 {
-    font-size: 
+    font-size: 24px;
 }
 
 .container-main {
@@ -52,7 +52,20 @@ h3 {
     align-content: center;
     background-color: white;
     border-radius: 15px;
-    padding: 1%;
+    padding: 0.75%;
+}
+
+.header .search h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 3px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.header .search .fields {
+    display: flex;
+    flex-direction: row;
 }
 
 .header .search .searchbutton {
@@ -63,28 +76,26 @@ h3 {
 
 .header .search input[type=text] {
     float: right;
-    padding: 6px;
-    margin-top: 8px;
+    padding: 2px;
     margin-right: 16px;
-    font-size: 25px;
+    font-size: 15px;
     border-radius: 2px;
   }
 
 .header .search button[type=submit] {
     float: right;
     padding: 6px 10px;
-    margin-top: 8px;
     margin-right: 16px;
     background: #ddd;
     background-color: #0260ee;
-    font-size: 17px;
+    font-size: 25px;
     border: none;
     cursor: pointer;
 }
   
 .header .search h2 {
-      margin: 0px;
-      text-align: center;
+      margin-top: 0;
+      margin-bottom: 1.5%;
       font-size: 30px;
 }
 
@@ -116,6 +127,12 @@ h3 {
     text-decoration: none;
     color: #0c1425;
     font-size: 24px;
+    font-weight: 900;
+}
+
+.header nav ul li a:hover {
+    border-bottom:3px solid black;
+    padding-bottom: 5px;
 }
 
 .aboutus {
@@ -142,7 +159,7 @@ h3 {
     display: flex; 
     flex-wrap: wrap; 
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .main-content .card {
