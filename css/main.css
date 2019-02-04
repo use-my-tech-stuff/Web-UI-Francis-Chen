@@ -117,3 +117,7 @@ h3 {
 .main-content .card {
     width: 30%; 
 }
+
+.main-content .card img {
+    width: 75%;
+}
