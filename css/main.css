@@ -148,7 +148,7 @@ h3 {
 }
 
 .header nav ul li a:hover {
-    border-bottom:3px solid black;
+    border-bottom:3px solid #0260ee;
     padding-bottom: 25px;
 }
 
