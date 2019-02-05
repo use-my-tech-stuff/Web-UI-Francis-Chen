@@ -5,20 +5,23 @@
     display: none;
 }
 
+.container-main {
+
+    display: flex;
+    flex-direction: column;
+
+    .item1 {
+        order: 1;
+    }
+
+    .item2 {
+        order: 0;
+    }
+}
+
 @media (max-width: 500px) {
     body {
         max-width: 500px;
-    }
-
-    .container-main {
-
-        .item1 {
-            order: 1;
-        }
-
-        .item2 {
-            order: 0;
-        }
     }
 
     .header {
@@ -37,6 +40,16 @@
                 margin-top: 3%;
                 margin-bottom: 3%;
             }
+        }
+        
+        .onloadText {
+            top: 27.5%;
+            left: 12.5%;
+            width: 75%;
+             h1 {
+                 text-align: center;
+                 font-size: 22px;
+             }
         }
 
         nav {

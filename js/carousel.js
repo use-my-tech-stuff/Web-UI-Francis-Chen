@@ -72,11 +72,28 @@ class Carousel {
 let carousel1 = document.querySelector(".main-content");
 let carousel2 = document.querySelector(".aboutus");
 
-newCarousel1 = new Carousel(carousel1);
-newCarousel2 = new Carousel(carousel2);
-
 let mq = window.matchMedia("(max-width: 500px)");
 
-mq.addListener(newCarousel1.activateCarousel(mq));
-mq.addListener(newCarousel2.activateCarousel(mq));
+if (mq.matches) {
+    newCarousel1 = new Carousel(carousel1);
+    newCarousel2 = new Carousel(carousel2);
+}
 
+
+function activateCarousel(mq) {
+    if (mq.matches) {
+        carousel1.forEach(image => image.style.display = "none");
+        carousel1.cards[this.currentIndex].style.display = "block"; 
+
+        carousel2.forEach(image => image.style.display = "none");
+        carousel2.cards[this.currentIndex].style.display = "block"; 
+        console.log("mobile");
+    }
+    else {
+        carousel1.cards.forEach(image => image.style.display = "inline");
+        carousel2.cards.forEach(image => image.style.display = "inline");
+        console.log("non-mobile");
+    }
+}
+
+mq.addListener(activateCarousel);
