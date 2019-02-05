@@ -1,4 +1,7 @@
 @media (max-width: 500px) {
+  body {
+    max-width: 500px;
+  }
   .header {
     position: unset;
     display: flex;
@@ -22,5 +25,45 @@
   .header .search .fields {
     display: flex;
     flex-direction: column;
+  }
+  .main-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 16px;
+    flex-wrap: nowrap;
+  }
+  .main-content .card {
+    width: 100%;
+    text-align: center;
+  }
+  .main-content .left-button {
+    top: 50%;
+    left: 5px;
+    transform: translate(0, -50%);
+    font-size: 40px;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .main-content .right-button {
+    top: 50%;
+    right: 5px;
+    transform: translate(0, -50%);
+    font-size: 40px;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: inline-block;
   }
 }

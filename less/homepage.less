@@ -2,7 +2,9 @@
 // for mobile use
 
 @media (max-width: 500px) {
-
+    body {
+        max-width: 500px;
+    }
     .header {
         position: unset;
 
@@ -34,7 +36,28 @@
     }
 
     .main-content {
+
+        .flexrow();
+        .carousel();
+        flex-wrap: nowrap;
         
+        .card {
+            width: 100%;
+            text-align: center;
+        }
+
+        .left-button {
+            .carousel-left-button();
+            .button-properties();
+            display: inline-block;
+        } 
+        
+        .right-button {
+            .carousel-right-button();
+            .button-properties();
+            display: inline-block;
+            
+        }
     }
 
 
