@@ -1,0 +1,26 @@
+@media (max-width: 500px) {
+  .header {
+    position: unset;
+    display: flex;
+    flex-direction: column;
+  }
+  .header .title {
+    order: 1;
+  }
+  .header nav {
+    display: none;
+  }
+  .header img {
+    order: 2;
+  }
+  .header .search {
+    position: unset;
+    z-index: -1;
+    order: 3;
+    margin: 2%;
+  }
+  .header .search .fields {
+    display: flex;
+    flex-direction: column;
+  }
+}
