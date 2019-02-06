@@ -29,7 +29,8 @@ body {
     height: 50%;
 }
 
-.header .above-image {
+.header .above-image .fa.fa-bars {
+    display: none;
 }
 
 .header .image {
@@ -152,7 +153,7 @@ body {
 }
 
 .header nav ul li {
-    padding: 30px;
+    padding: 20px;
 }
 
 .header nav ul li a {

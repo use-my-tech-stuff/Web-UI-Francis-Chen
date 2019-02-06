@@ -34,7 +34,12 @@ class Carousel {
             this.cards.forEach(image => image.style.display = "none");
             this.cards[this.currentIndex].style.display = "block"; 
             if (window.matchMedia("(min-width: 500px)").matches) {
-                this.cards[this.currentIndex-1].style.display = "block";
+                if (this.currentIndex - 1 < 0) {
+                    this.cards[this.cards.length-1].style.display = "block";
+                } else {
+                    this.cards[this.currentIndex-1].style.display = "block";
+                }
+                
             }
         }
         
@@ -53,7 +58,12 @@ class Carousel {
         this.cards[this.currentIndex].style.display = "block";
 
         if (window.matchMedia("(min-width: 500px)").matches) {
-            this.cards[this.currentIndex+1].style.display = "block";   
+            if (this.currentIndex + 1 >= this.cards.length) {
+                this.cards[0].style.display = "block";   
+            }
+            else {
+                this.cards[this.currentIndex+1].style.display = "block"; 
+            }  
         }
 
         this.animate();
@@ -108,12 +118,30 @@ function activateCarousel() {
     else if (window.matchMedia("(max-width: 800px)").matches) {
         newCarousel1.cards.forEach(image => image.style.display = "none");
         newCarousel1.cards[newCarousel1.currentIndex].style.display = "block"; 
-        newCarousel1.cards[newCarousel1.currentIndex+1].style.display = "block"
+        if (newCarousel1.currentIndex >= newCarousel1.cards.length) {
+            newCarousel1.cards[0].style.display = "block";
+        }
+        else if (newCarousel1.currentIndex < 0) {
+            newCarousel1.cards[newCarousel1.cards.length-1].style.display = "block";
+        }
+        else {
+            newCarousel1.cards[newCarousel1.currentIndex+1].style.display = "block";
+        }
         
         // array method
         newCarousel2.cards.forEach(image => image.style.display = "none");
         newCarousel2.cards[newCarousel2.currentIndex].style.display = "block";
-        newCarousel2.cards[newCarousel2.currentIndex+1].style.display = "block";
+
+        if (newCarousel2.currentIndex >= newCarousel2.cards.length) {
+            newCarousel2.cards[0].style.display = "block";
+        }
+        else if (newCarousel2.currentIndex < 0) {
+            newCarousel2.cards[newCarousel2.cards.length-1].style.display = "block";
+        }
+        else {
+            newCarousel2.cards[newCarousel2.currentIndex+1].style.display = "block";
+        }
+        
 
         console.log("tablet");
     }
