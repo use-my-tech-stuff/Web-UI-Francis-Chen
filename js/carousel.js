@@ -11,8 +11,16 @@ class Carousel {
         this.rightButton.addEventListener("click", () => this.moveRight());
 
         // array method
-        this.cards.forEach(image => image.style.display = "none");
-        this.cards[this.currentIndex].style.display = "block"; 
+        if (window.matchMedia("(max-width: 500px)").matches) {
+            this.cards.forEach(image => image.style.display = "none");
+            this.cards[this.currentIndex].style.display = "block"; 
+        }
+        else if (window.matchMedia("(max-width: 800px)").matches) {
+            this.cards.forEach(image => image.style.display = "none");
+            this.cards[this.currentIndex].style.display = "block"; 
+            this.cards[this.currentIndex+1].style.display = "block"; 
+        }
+
     }
 
     moveLeft(){
@@ -25,7 +33,9 @@ class Carousel {
             // array method
             this.cards.forEach(image => image.style.display = "none");
             this.cards[this.currentIndex].style.display = "block"; 
-            
+            if (window.matchMedia("(min-width: 500px)").matches) {
+                this.cards[this.currentIndex-1].style.display = "block";
+            }
         }
         
         this.animate();
@@ -41,6 +51,11 @@ class Carousel {
 
         this.cards.forEach(image => image.style.display = "none");
         this.cards[this.currentIndex].style.display = "block";
+
+        if (window.matchMedia("(min-width: 500px)").matches) {
+            this.cards[this.currentIndex+1].style.display = "block";   
+        }
+
         this.animate();
     }
     
@@ -76,9 +91,11 @@ let newCarousel1 = new Carousel(carousel1);
 let newCarousel2 = new Carousel(carousel2);
 
 let mq = window.matchMedia("(max-width: 500px)");
+let tq = window.matchMedia("(max-width: 800px)");
 
-function activateCarousel(mq) {
-    if (mq.matches) {
+function activateCarousel() {
+
+    if (window.matchMedia("(max-width: 500px)").matches) {
         // array method
         newCarousel1.cards.forEach(image => image.style.display = "none");
         newCarousel1.cards[newCarousel1.currentIndex].style.display = "block"; 
@@ -88,6 +105,19 @@ function activateCarousel(mq) {
         newCarousel2.cards[newCarousel2.currentIndex].style.display = "block"; 
         console.log("mobile");
     }
+    else if (window.matchMedia("(max-width: 800px)").matches) {
+        newCarousel1.cards.forEach(image => image.style.display = "none");
+        newCarousel1.cards[newCarousel1.currentIndex].style.display = "block"; 
+        newCarousel1.cards[newCarousel1.currentIndex+1].style.display = "block"
+        
+        // array method
+        newCarousel2.cards.forEach(image => image.style.display = "none");
+        newCarousel2.cards[newCarousel2.currentIndex].style.display = "block";
+        newCarousel2.cards[newCarousel2.currentIndex+1].style.display = "block";
+
+        console.log("tablet");
+    }
+
     else {
         // array method 
         newCarousel1.cards.forEach(image => image.style.display = "inline");
@@ -96,5 +126,6 @@ function activateCarousel(mq) {
     }
 }
 
-activateCarousel(mq);
+activateCarousel();
 mq.addListener(activateCarousel);
+tq.addListener(activateCarousel);

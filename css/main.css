@@ -60,6 +60,10 @@ body {
     align-items: center;
 }
 
+.header .title {
+    margin-left: 3%;
+}
+
 .header-text {
     margin-top: 25px;
 }
@@ -72,6 +76,7 @@ body {
 .header .onloadText {
     opacity: 1;
     color: white;
+    text-align: center;
 }
 
 .header .onloadText h1 {
