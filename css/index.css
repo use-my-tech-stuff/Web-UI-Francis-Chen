@@ -1,3 +1,15 @@
+.menu-dropdown {
+  display: inline;
+}
+.menu-dropdown ul {
+  display: flex;
+  flex-direction: column;
+}
+.menu-dropdown ul li {
+  padding: 4%;
+  background-color: aliceblue;
+  border: 1px solid black;
+}
 .header .search .toggable {
   display: none;
 }
@@ -15,10 +27,10 @@
   .header .above-image .top-row .title h1 {
     font-size: 24px;
   }
-  .header .above-image .top-row nav ul li {
+  .header .above-image .top-row .menu nav ul li {
     padding: 7px;
   }
-  .header .above-image .top-row nav ul li a {
+  .header .above-image .top-row .menu nav ul li a {
     font-size: 15px;
   }
   .header .above-image .middle-column {

@@ -31,6 +31,7 @@ body {
 
 .header .above-image .fa.fa-bars {
     display: none;
+    cursor: pointer; 
 }
 
 .header .image {
@@ -152,20 +153,20 @@ body {
     overflow: hidden;
 }
 
-.header nav ul li {
+.header .above-image .top-row .menu nav ul li {
     padding: 20px;
 }
 
-.header nav ul li a {
+.header .above-image .top-row .menu nav ul li a {
     text-decoration: none;
     color: #0c1425;
     font-size: 18px;
     font-weight: 900;
 }
 
-.header nav ul li a:hover {
-    border-bottom:3px solid #0260ee;
-    padding-bottom: 25px;
+.header .above-image .top-row .menu nav ul li a:hover {
+    border-bottom: 3px solid #0260ee;
+    padding-bottom: 10px;
 }
 
 .aboutus {
