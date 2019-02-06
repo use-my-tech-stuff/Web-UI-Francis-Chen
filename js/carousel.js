@@ -10,10 +10,9 @@ class Carousel {
         this.leftButton.addEventListener("click", () => this.moveLeft());
         this.rightButton.addEventListener("click", () => this.moveRight());
 
+        // array method
         this.cards.forEach(image => image.style.display = "none");
         this.cards[this.currentIndex].style.display = "block"; 
-
-
     }
 
     moveLeft(){
@@ -23,6 +22,7 @@ class Carousel {
         if (this.currentIndex < 0){
             this.currentIndex = this.cards.length-1;
 
+            // array method
             this.cards.forEach(image => image.style.display = "none");
             this.cards[this.currentIndex].style.display = "block"; 
             
@@ -72,28 +72,29 @@ class Carousel {
 let carousel1 = document.querySelector(".main-content");
 let carousel2 = document.querySelector(".aboutus");
 
+let newCarousel1 = new Carousel(carousel1);
+let newCarousel2 = new Carousel(carousel2);
+
 let mq = window.matchMedia("(max-width: 500px)");
-
-if (mq.matches) {
-    newCarousel1 = new Carousel(carousel1);
-    newCarousel2 = new Carousel(carousel2);
-}
-
 
 function activateCarousel(mq) {
     if (mq.matches) {
-        carousel1.forEach(image => image.style.display = "none");
-        carousel1.cards[this.currentIndex].style.display = "block"; 
+        // array method
+        newCarousel1.cards.forEach(image => image.style.display = "none");
+        newCarousel1.cards[newCarousel1.currentIndex].style.display = "block"; 
 
-        carousel2.forEach(image => image.style.display = "none");
-        carousel2.cards[this.currentIndex].style.display = "block"; 
+        // array method
+        newCarousel2.cards.forEach(image => image.style.display = "none");
+        newCarousel2.cards[newCarousel2.currentIndex].style.display = "block"; 
         console.log("mobile");
     }
     else {
-        carousel1.cards.forEach(image => image.style.display = "inline");
-        carousel2.cards.forEach(image => image.style.display = "inline");
+        // array method 
+        newCarousel1.cards.forEach(image => image.style.display = "inline");
+        newCarousel2.cards.forEach(image => image.style.display = "inline");
         console.log("non-mobile");
     }
 }
 
+activateCarousel(mq);
 mq.addListener(activateCarousel);
