@@ -134,7 +134,7 @@ function activateCarousel() {
 
         if (newCarousel2.currentIndex >= newCarousel2.cards.length) {
             newCarousel2.cards[0].style.display = "block";
-        }
+        } 
         else if (newCarousel2.currentIndex < 0) {
             newCarousel2.cards[newCarousel2.cards.length-1].style.display = "block";
         }
