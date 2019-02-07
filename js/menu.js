@@ -19,3 +19,32 @@ class Menu {
 
 let menu = document.querySelector("nav");
 let a_menu = new Menu(menu);
+
+let wq = window.matchMedia("(max-width: 500px)");
+
+function deactivateDropDownMenu() {
+
+    // true or false // check conditions 
+
+    let MenuDropped = menu.querySelector("ul").classList.contains("menu-dropdown");
+    let searchBarGone = document.querySelector(".middle-column").classList.contains("hideSearch")
+    let topHeaderGone = document.querySelector(".header").classList.contains("colorwhite");
+    
+    // check if media query is larger than 500px
+    
+    if (!window.matchMedia("(max-width: 500px)").matches) {
+
+        // check if classlist already contains these classes 
+        if (MenuDropped & searchBarGone & topHeaderGone) {
+
+            // if so, we shall remove!
+            menu.querySelector("ul").classList.remove("menu-dropdown");
+            document.querySelector(".middle-column").classList.remove("hideSearch");
+            document.querySelector(".header").classList.remove("colorwhite");
+            
+        }        
+    }
+}
+
+deactivateDropDownMenu();
+wq.addListener(deactivateDropDownMenu);
