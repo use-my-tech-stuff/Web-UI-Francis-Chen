@@ -43,17 +43,33 @@ body {
     height: 75%;
 }
 
-.container-main {
-    margin: 0 auto;
-    width: 85%; 
-    display: block;
-} 
-
-
-.header .above-image .top-row {
+.header .above-image nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.header nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.header .above-image nav ul li {
+    padding: 20px;
+    display: inline-block;
+}
+
+.header .above-image nav ul li a {
+    text-decoration: none;
+    color: #0c1425;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.header .above-image .top-row .menu nav ul li a:hover {
+    border-bottom: 3px solid #0260ee;
+    padding-bottom: 10px;
 }
 
 .header .above-image .middle-column {
@@ -146,28 +162,11 @@ body {
       font-size: 200%;
 }
 
-.header nav ul {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    overflow: hidden;
-}
-
-.header .above-image .top-row .menu nav ul li {
-    padding: 20px;
-}
-
-.header .above-image .top-row .menu nav ul li a {
-    text-decoration: none;
-    color: #0c1425;
-    font-size: 18px;
-    font-weight: 900;
-}
-
-.header .above-image .top-row .menu nav ul li a:hover {
-    border-bottom: 3px solid #0260ee;
-    padding-bottom: 10px;
-}
+.container-main {
+    margin: 0 auto;
+    width: 85%; 
+    display: block;
+} 
 
 .aboutus {
     display: flex; 
@@ -179,11 +178,6 @@ body {
 .card {
     margin: 0.5%;
     border-radius: 5px;
-}
-
-.aboutus .item {
-    width: 30%;
-    height: 30%;
 }
 
 .main-content {

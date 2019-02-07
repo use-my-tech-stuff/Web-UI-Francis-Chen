@@ -1,17 +1,22 @@
 // for menu dropdown
 
+.colorwhite {
+    background-image: none;
+}
+
 .menu-dropdown {
-    display: inline;
+    .flexcolumn() !important;
 
-    ul {
-        .flexcolumn();
+    padding: 4%;
+    background-color: aliceblue;
+    border: 1px solid black;
+    width: 100%;
+    z-index: 3;
+    align-self: center;
+    align-items: stretch;
 
-        li {
-            padding: 4%;
-            background-color: aliceblue;
-            border: 1px solid black;
-        }
+}
 
-    }
-
+.hideSearch {
+    display: none !important;
 }

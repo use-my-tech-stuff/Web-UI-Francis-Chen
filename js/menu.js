@@ -1,20 +1,21 @@
 class Menu {
 
     constructor(menu) {
+        this.menu = menu;
         this.clickableMenu = menu.querySelector(".fa.fa-bars");
-        this.menuItems = menu.querySelector("nav");
+        this.menuItems = menu.querySelector("ul");
     
         this.clickableMenu.addEventListener("click", () => this.onClick());
     }
 
     onClick(){
-        console.log("click.");
-        console.log(this.menuItems);
-        console.log(this.menuItems.classList);
-        this.menuItems.setAttribute("display", "inline");
-        this.menuItems.classList.toggle("menu-dropdown");
+        if (window.matchMedia("(max-width:500px)").matches) {
+            this.menuItems.classList.toggle("menu-dropdown");
+            document.querySelector(".middle-column").classList.toggle("hideSearch");
+            document.querySelector(".header").classList.toggle("colorwhite");
+        }
     }
 }
 
-let menu = document.querySelector(".menu");
+let menu = document.querySelector("nav");
 let a_menu = new Menu(menu);

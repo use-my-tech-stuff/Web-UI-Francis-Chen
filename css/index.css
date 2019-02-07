@@ -1,14 +1,19 @@
+.colorwhite {
+  background-image: none;
+}
 .menu-dropdown {
-  display: inline;
-}
-.menu-dropdown ul {
-  display: flex;
-  flex-direction: column;
-}
-.menu-dropdown ul li {
+  display: flex !important;
+  flex-direction: column !important;
   padding: 4%;
   background-color: aliceblue;
   border: 1px solid black;
+  width: 100%;
+  z-index: 3;
+  align-self: center;
+  align-items: stretch;
+}
+.hideSearch {
+  display: none !important;
 }
 .header .search .toggable {
   display: none;
@@ -54,49 +59,54 @@
   .header {
     position: unset;
     padding: 5px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
-  .header .title {
-    order: 1;
-    text-align: center;
+  .header .above-image nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
-  .header .title h1 {
+  .header .above-image nav .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header .above-image nav .title h1 {
+    display: inline-block;
     margin-top: 3%;
     margin-bottom: 3%;
     font-size: 30px;
   }
-  .header .above-image .top-row {
-    flex-direction: row-reverse;
+  .header .above-image nav .title .fa.fa-bars {
+    display: inline-block;
   }
-  .header .above-image .top-row .fa.fa-bars {
-    display: inline;
+  .header .above-image nav ul li {
+    text-align: center;
   }
-  .header .above-image .middle-column {
+  .header .above-image ul {
+    display: none;
+  }
+  .header .middle-column {
     padding-top: 30%;
   }
-  .header .above-image .middle-column .onloadText h1 {
+  .header .middle-column .onloadText h1 {
     text-align: center;
     font-size: 25px;
   }
-  .header .above-image .middle-column .search {
+  .header .middle-column .search {
     order: 3;
     width: 100%;
     padding: 2%;
     border-radius: 0;
   }
-  .header .above-image .middle-column .search h2 {
+  .header .middle-column .search h2 {
     text-align: center;
   }
-  .header .above-image .middle-column .search .fields {
+  .header .middle-column .search .fields {
     display: flex;
     flex-direction: column;
   }
-  .header .above-image .middle-column .search .fields .toggable {
-    display: none;
-  }
-  .header .above-image nav {
+  .header .middle-column .search .fields .toggable {
     display: none;
   }
   .header-text {
