@@ -1,80 +1,103 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet/less" type="text/css" href="index.less" />
+    
+    <script src="./js/carousel.js" async></script>
+    <script src="./js/menu.js" async></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 </head>
 <body>
 
-<div class="header">
-        
-    <div class = "title">
-         <h1> <i class="fa fa-camera" aria-hidden="true"></i>
-        Tech Plum</h1>
-    </div>
-        
-    <div class = "search">
+    <div class="header">
     
-        <h2>Book your high end electronics here today!</h2>
-        
-            <div class = "fields">   
+        <div class = "above-image">
+
+                <nav>
+                    
+                    <div class = "title">
+                            <h1> <i class="fa fa-camera" aria-hidden="true"></i>
+                             Tech Plum</h1>
+
+                             <i class="fa fa-bars" style="font-size:48px"></i>
+                    </div>
+
+                    <ul>
+                            <li><a href="#">Become a vendor</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Sign Up</a></li>
+                            <li><a href="https://confident-volhard-2cd954.netlify.com/">Log In</a></li>
+                    </ul>
+
+                </nav>
+
+
+            <div class = "middle-column">
+
+                <div class="onloadText">
+
+                    <h1>"Your one stop shop for high end electronic rentals."</h1>
+
+                </div>
             
-            <h3>Where:</h3>
-            <input type="text" placeholder="City">
+                <div class = "search">
+                
+                    <div class = "fields">   
+                    
+                        <div class = "toggable">
+                        <h3>Where:</h3>
+                        <input type="text" placeholder="City">
+                        </div>
 
-            <h3>Check In:</h3>
-            <input type="text" placeholder="MM/DD/YY">
+                        <div class = "toggable">
+                        <h3>Check In:</h3>
+                        <input type="text" placeholder="MM/DD/YY">
+                        </div>
 
-            <h3>Check Out:</h3>
-            <input type="text" placeholder="MM/DD/YY">
+                        <div class = "toggable">
+                        <h3>Check Out:</h3>
+                        <input type="text" placeholder="MM/DD/YY">
+                        </div>
 
-            <h3>Electronics Type:</h3>
+                        <div class = "toggable">
+                        <h3>Electronics Type:</h3>
+                        </div>
 
-            <div class = "searchbutton">
+                    </div>
 
-                <input type="text" placeholder="Search..">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            
+                    <div class = "searchbutton">
+
+                        <input type="text" class="typable" placeholder="Search.." value="Cameras">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    
+                    </div>
+
+                </div>
+
             </div>
 
-            </div>
+        </div>
 
-    </div>
-    
-
-     <img src="./img/headerimg.jpg">
-        
-        <nav>
-            <ul>
-                    <li><a href="#">Become a vendor</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Sign Up</a></li>
-                    <li><a href="#">Log In</a></li>
-            </ul>
-        </nav>
-        
 </div>
+        
 
 <div class ="container-main">
+    
+    <div class ="item1">
     <div class ="header-text">
         <h2>Most popular items in your area:</h2>
         <h3>As recommended by local shoppers.</h3>
     </div>
     <div class = "main-content">
-        
-        <div class ="card">
-            <img src="./img/stockcamera.jpg"></img>
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-        
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </div>
+        <div class="left-button"><</div>
 
         <div class ="card">
             <img src="./img/stockcamera.jpg"></img>
@@ -89,7 +112,19 @@
         </div>
 
         <div class ="card">
-            <img src="./img/stockcamera.jpg"></img>
+            <img src="./img/laptop.png"></img>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+        
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+        </div>
+
+        <div class ="card">
+            <img src="./img/ipad.jpg"></img>
             <h3>Lorem Ipsum</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
 
@@ -101,9 +136,9 @@
         </div>
 
         <div class ="card">
-            <img src="./img/stockcamera.jpg"></img>
+            <img src="./img/alexa.jpg"></img>
             <h3>Lorem Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+            <p> sed do eiusmod tempor incididunt</p>
 
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -113,9 +148,9 @@
         </div>
 
         <div class ="card">
-            <img src="./img/stockcamera.jpg"></img>
+            <img src="./img/samsunggalaxy.jpg"></img>
             <h3>Lorem Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+            <p>consectetur adipiscing elit</p>
 
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -125,7 +160,7 @@
         </div>
 
         <div class ="card">
-            <img src="./img/stockcamera.jpg"></img>
+            <img src="./img/magicleap.jpg"></img>
             <h3>Lorem Ipsum</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
 
@@ -136,44 +171,12 @@
             <span class="fa fa-star"></span>
         </div>
 
-        <div class ="card">
-            <img src="./img/stockcamera.jpg"></img>
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
 
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </div>
-
-        <div class ="card">
-            <img src="./img/stockcamera.jpg"></img>
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-
-        </div>
-
-        <div class ="card">
-            <img src="./img/stockcamera.jpg"></img>
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </div>
+    <div class="right-button">></div>
     </div>
+</div>
 
+<div class="item2">
      <div class ="header-text">
         
         <h2>About us:</h2>
@@ -182,11 +185,14 @@
     </div>
     
     <div class ="aboutus">
-        <div class ="item"></div>
-        <div class ="item"></div>
-        <div class ="item"></div>
+        <div class="left-button"><</div>
+        <div class ="card"> <img src="./img/aboutimg.jpg"></img> <p>Our goal is to provide high quality electronics without the need for full ownership.</p></div>
+        <div class ="card"> <img src="./img/huaqiangbei.jpg"></img> <p>You can rent electronics from trusted vendors from your area.</p></div>
+        <div class ="card"> <img src="./img/weddingphoto.jpg"></img> <p>Anytime, any place, anywhere!</p></div>
+        <div class="right-button">></div>
     </div>
-    
+
+</div>    
 
     <div class="footer">
         </div>

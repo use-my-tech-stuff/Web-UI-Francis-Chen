@@ -1,7 +1,3 @@
-body {
-    font-family: Roboto;
-    background-color: #ebeff8; 
-}
 
 h1 {
     font-size: 36px;
@@ -19,17 +15,71 @@ h3 {
     color: #0260ee;
 }
 
-.container-main {
-    margin: 0 auto;
-    width: 85%; 
+body {
+    font-family: Roboto;
+    background-color: #ebeff8;
+    font-size: 100%;  
 }
+
 
 .header {
-    position: relative;
+    background-image: url("../img/headerimg2.jpg");
+    background-size: cover;
+    z-index: 1;
+    height: 50%;
 }
 
-.header-text {
-    /*text-align: center;*/
+.header .above-image .fa.fa-bars {
+    display: none;
+    cursor: pointer; 
+}
+
+.header .image {
+    width: 100%;
+    filter: grayscale(100%);
+}
+
+.header .image img {
+    height: 75%;
+}
+
+.header .above-image nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.header .above-image nav ul li {
+    padding: 20px;
+    display: inline-block;
+}
+
+.header .above-image nav ul li a {
+    text-decoration: none;
+    color: #0c1425;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.header .above-image .top-row .menu nav ul li a:hover {
+    border-bottom: 3px solid #0260ee;
+    padding-bottom: 10px;
+}
+
+.header .above-image .middle-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header .title {
+    margin-left: 3%;
 }
 
 .header-text {
@@ -41,32 +91,27 @@ h3 {
     margin-bottom: 2px;
 }
 
-.header .title {
-    position: absolute;
-    z-index: 2;
-    top: 0%;
-    left: 5%;
+.header .onloadText {
+    opacity: 1;
+    color: white;
+    text-align: center;
 }
 
-.header img {
-    width: 100%;
-    z-index: -1;
-    opacity: 75%;
-    /*filter: grayscale(100%);*/
+.header .onloadText h1 {
+    font-size: 36px;
 }
 
 .header .search {
-    z-index: 2;
-    position: absolute;
-    top: 80%;
-    left: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    align-items: center;
     background-color: white;
     border-radius: 15px;
     padding: 0.75%;
+    width: 33%;
+    text-align: center;
 }
 
 .header .search h3 {
@@ -92,8 +137,9 @@ h3 {
     float: right;
     padding: 2px;
     margin-right: 16px;
-    font-size: 15px;
+    font-size: 30px;
     border-radius: 2px;
+    width: 80%;
   }
 
 .header .search button[type=submit] {
@@ -101,7 +147,7 @@ h3 {
     padding: 6px 10px;
     margin-right: 16px;
     background-color: #0260ee;
-    font-size: 15px;
+    font-size: 30px;
     border: none;
     cursor: pointer;
 }
@@ -113,50 +159,19 @@ h3 {
 .header .search h2 {
       margin-top: 0;
       margin-bottom: 1.5%;
-      font-size: 24px;
+      font-size: 200%;
 }
 
-.header .img {
-    width: 100%;
-    z-index: -1;
-    opacity: 75%;
-    height: 200px;
-}
-
-.header nav{
-    z-index: 2;
-    position: absolute;
-    top: 0%;
-    right: 15px;
-}
-
-.header nav ul {
-    list-style-type: none;
-    overflow: hidden;
-}
-
-.header nav ul li {
-    float: left; 
-    padding: 30px;
-}
-
-.header nav ul li a {
-    text-decoration: none;
-    color: #0c1425;
-    font-size: 18px;
-    font-weight: 900;
-}
-
-.header nav ul li a:hover {
-    border-bottom:3px solid black;
-    padding-bottom: 25px;
-}
+.container-main {
+    margin: 0 auto;
+    width: 85%; 
+    display: block;
+} 
 
 .aboutus {
     display: flex; 
     flex-wrap: wrap; 
     text-align: center;
-    align-content: center;
     justify-content: center;
 }
 
@@ -165,18 +180,22 @@ h3 {
     border-radius: 5px;
 }
 
-.aboutus .item {
-    width: 30%;
-    height: 30%;
-}
-
 .main-content {
     display: flex; 
     flex-wrap: wrap; 
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.left-button, .right-button {
+    display: none; 
 }
 
 .main-content .card {
+    width: 25%; 
+    padding: 3%;
+}
+
+.aboutus .card {
     width: 25%; 
     padding: 0.5%;
 }
@@ -186,3 +205,10 @@ h3 {
     border-radius: 10px;
     text-align: center;
 }
+
+.aboutus .card img {
+    width: 75%;
+    border-radius: 10px;
+    text-align: center;
+}
+
